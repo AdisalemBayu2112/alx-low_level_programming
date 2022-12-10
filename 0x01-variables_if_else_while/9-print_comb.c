@@ -1,29 +1,28 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
-
 /**
- * main - writes 0-9
- * @void: Empty parameter list for main.
- *
- * Description: Writes 0-9 with comma and space
- *
- * Return: 0 for success
+ * main - main block
+ * Description: Print all possible combinations fo single-digit numbers.
+ * Numbers must be separated by commas and a space.
+ * You can only use `putchar` to print to console
+ * You can only use `putchar` up to four times.
+ * You are not allowed to use any variable of type `char`.
+ * Return: 0
  */
 int main(void)
 {
-	int num = 48;
-	
-	while (num < 58)
+	int i = 0;
+
+	while (i < 10)
 	{
-		putchar(num);
-		if (num < 57)
+		putchar(i + '0');
+		if (i < 9)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
-		num++;
+		i++;
 	}
 	putchar('\n');
+
 	return (0);
 }
