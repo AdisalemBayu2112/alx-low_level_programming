@@ -1,23 +1,20 @@
 #include "_putchar.h"
-
 /**
- * main - Prints _putchar
- * @void: Empty parameter list for main.
- *
- * Description: Prints _putchar w/out stdio
- *
+ * main - Prints "_putchar" followed by a new line.
+ * Description: You are not allowed to include standard libraries.
  * Return: 0 for success
  */
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+	char _putchar[] = "_putchar";
+	int i = 0;
+
+	while (_putchar[i] != '\0')
+	{
+		_putchar(_putchar[i]);
+		i++;
+	}
 	_putchar('\n');
+
 	return (0);
 }
