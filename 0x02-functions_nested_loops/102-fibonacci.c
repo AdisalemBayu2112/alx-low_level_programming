@@ -6,6 +6,7 @@
  *
  *Return: Nothing.
  */
+
 int main(void)
 {
 	int count;
