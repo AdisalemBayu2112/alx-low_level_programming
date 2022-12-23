@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _strncat- a function to cat 2 strings by n.
  * @dest: we append to
  * @src: we appends from
