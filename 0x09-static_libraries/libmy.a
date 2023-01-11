@@ -1,21 +1,337 @@
+!<arch>
+0-isupper.o/    0           0     0     644     121       `
 #!/bin/bash
-int _putchar(char c);
-int _islower(int c);
-int _isalpha(int c);
-int _abs(int n);
-int _isupper(int c);
-int _isdigit(int c);
-int _strlen(char *s);
-void _puts(char *s);
-char *_strcpy(char *dest, char *src);
-int _atoi(char *s);
-char *_strcat(char *dest, char *src);
-char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
-int _strcmp(char *s1, char *s2);
+#include "main.h"
+
+int _isupper(int c)
+{
+	if ((c >= 'A') && (c <= 'Z'))
+		return (1);
+	else
+		return (0);
+}
+
+
+0-memset.o/     0           0     0     644     153       `
+#!/bin/bash
+#include "main.h"
+
 char *_memset(char *s, char b, unsigned int n);
-char *_memcpy(char *dest, char *src, unsigned int n);
-char *_strchr(char *s, char c);
-unsigned int _strspn(char *s, char *accept);
-char *_strpbrk(char *s, char *accept);
-char *_strstr(char *haystack, char *needle);
+{
+	unsigned int i;
+	
+	for (i = 0; i < n; i++)
+		s[i] = b;
+	return (s);
+}
+
+
+0-strcat.o/     0           0     0     644     200       `
+#!/bin/bash
+#include "main.h
+
+
+char *_strcat(char *dest, char *src)
+{
+	int i, n;
+
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+	}
+
+	for (n = 0; (dest[i + n] = *src++) != '\0'; n++)
+	{
+	}
+
+	return (dest);
+}
+
+1-isdigit.o/    0           0     0     644     119       `
+#!/bin/bash
+#include "main.h
+
+
+int _isdigit(int c)
+{
+	if ((c >= 48) && (c <= 57))
+		return (1);
+	else
+		return (0);
+}
+
+
+1-memcpy.o/     0           0     0     644     170       `
+#!/bin/bash
+#include "main.h
+
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+	
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
+
+	return (dest);
+}
+
+1-strncat.o/    0           0     0     644     247       `
+#!/bin/bash
+#include "main.h"
+
+
+char *_strncat(char *dest, char *src, int n)
+{
+	int i, co;
+
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+	}
+
+	for (co = 0; co < n; co++)
+	{
+		dest[i + co] = src[co];
+		if (src[co] == '\0')
+		co = n;
+	}
+
+	return (dest);
+}
+
+
+100-atoi.o/     0           0     0     644     68        `
+#!/bin/bash
+#include "main.h"
+
+int _atoi(char *s)
+{
+	return (0);
+}
+
+2-strchr.o/     0           0     0     644     186       `
+#!/bin/bash
+#include "main.h"
+#include <stdio.h>
+
+char *_strchr(char *s, char c)
+{
+	int i;
+
+	for (i = 0; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
+			return (s + i);
+	}
+
+	return (NULL);
+}
+
+2-strlen.o/     0           0     0     644     161       `
+#!/bin/bash
+#include "main.h"
+
+int _strlen(char *s)
+{
+	int i = 1, sum = 0;
+	char pl = s[0];
+
+	while (pl != '\0')
+	{
+		sum++;
+		pl = s[i++];
+	}
+	return (sum);
+}
+
+
+2-strncpy.o/    0           0     0     644     213       `
+#!/bin/bash
+#include "main.h
+
+
+char *_strncpy(char *dest, char *src, int n);
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+		if (i < n)
+			dest[i] = src[i];
+		while (i < n)
+			dest[i++] = '\0';
+
+	return (dest);
+}
+
+
+3-islower.o/    0           0     0     644     117       `
+#!/bin/bash
+#include "main.h"
+
+int _islower(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
+}
+
+
+3-puts.o/       0           0     0     644     138       `
+#!/bin/bash
+#include "main.h"
+
+void _puts(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		_putchar(s[i]);
+	}
+	_putchar('\n');
+}
+
+3-strcmp.o/     0           0     0     644     195       `
+#!/bin/bash
+#include "main.h"
+
+int _strcmp(char *s1, char *s2)
+{
+	int i;
+
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+	}
+	return (0);
+}
+
+
+3-strspn.o/     0           0     0     644     347       `
+#!/bin/bash
+#include "main.h"
+
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int i, n, value, check;
+
+	value = 0;
+	
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		check = 0;
+
+		for (n = 0; accept[n] != '\0'; n++)
+		{
+			if (accept[n] == s[i])
+			{
+				value++;
+				check = 1;
+			}
+		}
+
+		if (check == 0)
+			return (value);
+	}
+
+	return (value);
+}
+
+
+4-isalpha.o/    0           0     0     644     153       `
+#!/bin/bash
+#include "main.h"
+
+int _isalpha(int c)
+{
+	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
+		return (1);
+	else
+		return (0);
+}
+
+
+4-strpbrk.o/    0           0     0     644     253       `
+#!/bin/bash
+#include "main.h"
+#include <stdio.h>
+
+char *_strpbrk(char *s, char *accept)
+{
+	int i, n;
+	
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (n = 0; accept[n] != '\0'; n++)
+		{
+			if (s[i] == accept[n])
+				return (s + i);
+		}
+	}
+
+	return (NULL);
+}
+
+
+5-strstr.o/     0           0     0     644     318       `
+#!/bin/bash
+#include "main.h"
+#include <stdio.h>
+
+char *_strstr(char *haystack, char *needle)
+{
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *one = haystack;
+		char *two = needle;
+
+		while (*one == *two && *two != '\0')
+		{
+			one++;
+			two++;
+		}
+
+		if (*two == '\0')
+			return (haystack);
+	}
+
+	return (NULL);
+}
+
+6-abs.o/        0           0     0     644     91        `
+#!/bin/bash
+#include "main.h"
+
+int _abs(int ab)
+{
+	return (ab * ((ab > 0) - (ab < 0)));
+}
+
+
+9-strcpy.o/     0           0     0     644     157       `
+#!/bin/bash
+#include "main.h"
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	for (; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
+}
+
+
+_putchar.o/     0           0     0     644     104       `
+#!/bin/bash
+#include "main.h"
+#include <unistd.h>
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
