@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "dog.h"
+
 int get_len(int i);
 char *str_cpy(char *dest, char *src);
+
 /**
  * new_dog - a function that creates a new dog
  * get len of name + owner, malloc them, cpy name + owner to new
